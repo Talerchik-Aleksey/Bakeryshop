@@ -1,0 +1,93 @@
+@import "../../sass/variable"
+
+.header 
+  display: flex
+  justify-content: space-between 
+  
+  padding: 19px 19px
+
+  color: white
+  background-color: $blackColor
+
+  & > div
+    display: flex
+    align-items: center
+    
+    & > .search
+      height: 100%
+  
+      img
+        margin: 14px
+
+      input
+        background-color: hsla(220, 8%, 23%, 1)
+        color: $subColor
+        border: none
+        min-width: 400px 
+        height: 100%
+        border-radius: 30px
+        padding: 0px 0px 0px 44px
+        outline: none
+
+        &[type=search]:focus
+          border: 1px solid $subColor 
+    
+    button
+      background-color: $acentColor
+      color: white
+
+      border: none
+      border-radius: 100%
+
+      width: 45px
+      height: 45px
+      
+      font-size: 36px
+      line-height: 36px
+      margin-left: 19px
+
+    .pages 
+      display: flex
+      gap: 15px
+
+    .user
+      display: flex
+      align-items: center
+      gap: 13px
+      
+      & p
+        font-weight: 600
+
+      & .position
+        color: $subColor
+
+      img
+        border-radius: 100%
+        width: 45px
+        height: 45px
+        object-fit: cover
+
+@media screen and (max-width: 1200px)
+  .header
+    align-items: center
+    gap: 20px
+  .right
+    gap: 10px
+    .search
+      display: none
+      height: 44px !important
+    button
+      display: none
+
+@media screen and (max-width: 768px)
+  .header
+    flex-direction: column
+
+.separator
+  height: 44px 
+  width: 1px
+  background-color: $borderColor
+  margin: 0px 19px
+
+.searchIcon
+  position: absolute
